@@ -11,3 +11,6 @@ Microservices with Spring Boot.
 
 ## Microservices with Spring Boot:
 > With Spring Boot, your microservices can start small and iterate fast. That’s why it has become the de facto standard for Java™ microservices.
+
+#### Discovery Service
+> Name: Eureka-server Port:Running in 9010
