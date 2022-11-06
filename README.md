@@ -11,6 +11,11 @@ Microservices with Spring Boot.
 
 ## Microservices with Spring Boot:
 > With Spring Boot, your microservices can start small and iterate fast. That’s why it has become the de facto standard for Java™ microservices.
+## Details:
+> You always need to start the Eureka-server first and then the Zuul-server. Because eureka is our Discovery Service.
 
 #### Discovery Service
-> Name: Eureka-server Port:Running in 9010
+> Name: Eureka-server, Port:Running in 9010
+
+#### Gateway Service
+> Name: Zuul-server, Port:Running in 9011
