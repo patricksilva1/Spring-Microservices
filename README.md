@@ -22,4 +22,4 @@ Microservices with Spring Boot.
 > Name: Eureka-server, Port:Running in 9010
 
 #### Gateway Service
-> Name: Zuul-server, Port:Running in 9011!
+> Name: Zuul-server, Port:Running in 9011
