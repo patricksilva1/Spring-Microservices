@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaServiceApplication<eureka-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.patricksilva.eurekaservice.EurekaServiceApplication",
+            "projectName": "eureka-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PeopleControllerApplication<people-controller>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.patricksilva.peoplecontroller.PeopleControllerApplication",
+            "projectName": "people-controller",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
