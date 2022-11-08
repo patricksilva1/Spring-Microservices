@@ -17,9 +17,11 @@ Microservices with Spring Boot.
 
 ## How to Run and Details:
 > You always need to start the Eureka-server first and then the Zuul-server. Because eureka is our Discovery Service.
-
+ 
 #### Discovery Service
 > Name: Eureka-server, Port:Running in 9010
 
 #### Gateway Service
 > Name: Zuul-server, Port:Running in 9011
+#### Microservices
+> MS1 = MS-People-Controller
