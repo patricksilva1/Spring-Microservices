@@ -22,6 +22,10 @@ Microservices with Spring Boot.
 > Name: Eureka-server, Port:Running in 9010
 
 #### Gateway Service
-> Name: Zuul-server, Port:Running in 9011
+> Name: Api-Gateway, Port:Running in 9092
+
 #### Microservices
 > MS1 = MS-People-Controller
+
+#### How to search 
+> localhost:9092/ms-people-controller/api/people/status
