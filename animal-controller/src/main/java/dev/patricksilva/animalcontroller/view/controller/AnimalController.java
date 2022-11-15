@@ -47,7 +47,6 @@ public class AnimalController {
         ModelMapper mapper = new ModelMapper();
         AnimalDto dto = mapper.map(Animal, AnimalDto.class);
         dto = service.createAnimal(dto);
-
         return new ResponseEntity<>(mapper.map(dto, AnimalModelResponse.class), HttpStatus.CREATED);
     }
 
