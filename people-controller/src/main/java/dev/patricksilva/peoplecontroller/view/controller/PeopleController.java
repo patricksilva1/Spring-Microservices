@@ -27,13 +27,14 @@ import dev.patricksilva.peoplecontroller.view.model.PeopleModelRequest;
 import dev.patricksilva.peoplecontroller.view.model.PeopleModelResponse;
 
 @RestController
-@RequestMapping("/api/people")
+@RequestMapping(path = "/api/people")
 public class PeopleController {
     @Autowired
     private PeopleService service;
 
-    @GetMapping(value = "/status")
+    @GetMapping(path = "/status")
     public String statusService(@Value("${local.server.port}") String port) {
+
         return String.format("Running $s", port);
     }
 
@@ -44,7 +45,7 @@ public class PeopleController {
         dto = service.createPeople(dto);
 
         return new ResponseEntity<>(mapper.map(dto, PeopleModelResponse.class),
-                org.springframework.http.HttpStatus.CREATED);
+                HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -52,7 +53,7 @@ public class PeopleController {
         List<PeopleDto> dtos = service.findAll();
 
         if (dtos.isEmpty()) {
-            return new ResponseEntity<>(org.springframework.http.HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
         ModelMapper mapper = new ModelMapper();
@@ -60,19 +61,19 @@ public class PeopleController {
                 .map(dto -> mapper.map(dto, PeopleModelResponse.class))
                 .collect(Collectors.toList());
 
-        return new ResponseEntity<>(resp, org.springframework.http.HttpStatus.OK);
+        return new ResponseEntity<>(resp, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<PeopleModelResponse> findById(@PathVariable String id) {
         Optional<PeopleDto> people = service.findById(id);
 
         if (people.isPresent()) {
             return new ResponseEntity<>(new ModelMapper().map(people.get(), PeopleModelResponse.class),
-                    org.springframework.http.HttpStatus.OK);
+                    HttpStatus.OK);
         }
 
-        return new ResponseEntity<>(org.springframework.http.HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(value = "/{id}")
@@ -85,13 +86,13 @@ public class PeopleController {
 
         dto = service.updatePeople(id, dto);
 
-        return new ResponseEntity<>(mapper.map(dto, PeopleModelResponse.class), org.springframework.http.HttpStatus.OK);
+        return new ResponseEntity<>(mapper.map(dto, PeopleModelResponse.class), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void> removePeople(@PathVariable String id) {
         service.removePeople(id);
 
-        return new ResponseEntity<>(org.springframework.http.HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
