@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AnimalControllerApplication",
+            "request": "launch",
+            "mainClass": "dev.patricksilva.animalcontroller.AnimalControllerApplication"
+        },
+        {
+            "type": "java",
             "name": "Launch ApiGatewayApplication",
             "request": "launch",
             "mainClass": "dev.patricksilva.apigateway.ApiGatewayApplication"
@@ -16,7 +22,7 @@
             "args": "",
             "envFile": "${workspaceFolder}/.env",
             "noDebug": true,
-            "__progressId": "76c33230-c09f-4e72-bce1-38b264aae7c3"
+            "__progressId": "d8776741-ac12-4371-90c8-332603a054a9"
         },
         {
             "type": "java",
@@ -28,7 +34,7 @@
             "args": "",
             "envFile": "${workspaceFolder}/.env",
             "noDebug": true,
-            "__progressId": "df4315fe-0b11-4c50-b782-dd620a812081"
+            "__progressId": "827b414c-1895-4312-b808-f6270bf8b430"
         }
     ]
 }
