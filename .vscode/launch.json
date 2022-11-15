@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ConfigServerApplication",
+            "request": "launch",
+            "mainClass": "dev.patricksilva.configserver.ConfigServerApplication",
+            "projectName": "config-server"
+        },
+        {
+            "type": "java",
             "name": "Launch AnimalControllerApplication",
             "request": "launch",
             "mainClass": "dev.patricksilva.animalcontroller.AnimalControllerApplication"
