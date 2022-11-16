@@ -24,6 +24,8 @@ Microservices with Spring Boot.
 I will add more MS later for the MongoDB connection.
 
 ## How to Run and Details:
+> this was built with JDK 19.
+
 > You always need to start the config-server first, then Eureka-server and then the api-gateway. Because eureka is our discovery service and the configuration server is our server that will provide us with the ports
  
 #### Discovery Service
