@@ -16,16 +16,29 @@ Microservices with Spring Boot.
 ![Microservices](https://raw.githubusercontent.com/patricksilva1/Spring-Microservices/perf/architecture/Microservices.png)
 
 ## How to Run and Details:
-> You always need to start the Eureka-server first and then the Zuul-server. Because eureka is our Discovery Service.
+> You always need to start the config-server first, then Eureka-server and then the api-gateway. Because eureka is our discovery service and the configuration server is our server that will provide us with the ports
  
 #### Discovery Service
-> Name: Eureka-server, Port:Running in 9010
+> Name: Eureka-server; 
+>
+> Running at Port: 9010
 
 #### Gateway Service
-> Name: Api-Gateway, Port:Running in 9092
+> Name: Api-Gateway;
+> 
+>  Running at Port: 9011
 
-#### Microservices
+## Microservices:
 > MS1 = MS-People-Controller
+>
+> server.port = 0 (Eureka will decide the port)
+
+> MS2 = MS-Animals-Controller
+>
+> server.port = 0 (Eureka will decide the port)
 
 #### How to search 
-> localhost:9092/ms-people-controller/api/people/status
+  
+for example: 
+
+> localhost:9011/ms-people-controller/api/people/status 
