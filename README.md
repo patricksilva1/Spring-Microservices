@@ -15,6 +15,11 @@ Microservices with Spring Boot.
 ### Microservice Example:
 ![Microservices](https://raw.githubusercontent.com/patricksilva1/Spring-Microservices/perf/architecture/Microservices.png)
 
+### With DB:
+![Microservices2](https://raw.githubusercontent.com/patricksilva1/Spring-Microservices/perf/architecture/Microservices2.png)
+
+### How our architecture will look:
+
 ## How to Run and Details:
 > You always need to start the config-server first, then Eureka-server and then the api-gateway. Because eureka is our discovery service and the configuration server is our server that will provide us with the ports
  
