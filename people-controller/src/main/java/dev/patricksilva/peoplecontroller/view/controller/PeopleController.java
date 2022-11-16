@@ -27,15 +27,15 @@ import dev.patricksilva.peoplecontroller.view.model.PeopleModelRequest;
 import dev.patricksilva.peoplecontroller.view.model.PeopleModelResponse;
 
 @RestController
-@RequestMapping(path = "/api/people")
+@RequestMapping("/api/people")
 public class PeopleController {
     @Autowired
     private PeopleService service;
 
-    @GetMapping(path = "/status")
+    @GetMapping(value = "/status")
     public String statusService(@Value("${local.server.port}") String port) {
 
-        return String.format("Running $s", port);
+        return String.format("Running at $s", port);
     }
 
     @PostMapping
