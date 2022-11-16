@@ -64,7 +64,7 @@ public class PeopleController {
         return new ResponseEntity<>(resp, HttpStatus.OK);
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<PeopleModelResponse> findById(@PathVariable String id) {
         Optional<PeopleDto> people = service.findById(id);
 
@@ -76,7 +76,7 @@ public class PeopleController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping(value = "/{id}")
     public ResponseEntity<PeopleModelResponse> updatePeople(@PathVariable String id,
             @Valid @RequestBody People people) {
 
@@ -89,7 +89,7 @@ public class PeopleController {
         return new ResponseEntity<>(mapper.map(dto, PeopleModelResponse.class), HttpStatus.OK);
     }
 
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void> removePeople(@PathVariable String id) {
         service.removePeople(id);
 
